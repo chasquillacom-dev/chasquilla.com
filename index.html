@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+<html class="light" lang="es" style="scroll-behavior: smooth;"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chasquilla.com - Remodelaciones del Futuro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f97a1f",
+              "background-light": "#f8f7f5",
+              "background-dark": "#23170f",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk"],
+              "header": ["Orbitron"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .bg-grid {
+        background-image: linear-gradient(to right, rgba(249, 122, 31, 0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(249, 122, 31, 0.05) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .laser-scan {
+        box-shadow: 0 0 15px 2px rgba(249, 122, 31, 0.8);
+      }
+      .hud-line {
+        background: linear-gradient(90deg, transparent, rgba(249, 122, 31, 0.5), transparent);
+      }
+      .glass-nav {
+        background: rgba(248, 247, 245, 0.8);
+        backdrop-filter: blur(12px);
+      }
+      .glow-btn-primary {
+        box-shadow: 0 4px 14px 0 rgba(249, 122, 31, 0.39);
+      }
+      .perspective-card {
+        transform: perspective(1000px) rotateY(-2deg);
+      }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-stone-800 dark:text-stone-100 min-h-screen overflow-x-hidden selection:bg-primary selection:text-white">
+<!-- Subtle Digital Grid Background -->
+<div class="fixed inset-0 bg-grid pointer-events-none opacity-40"></div>
+
+<!-- Inicio Section -->
+<section id="inicio" class="relative pt-32 pb-20 px-4 sm:px-6 max-w-7xl mx-auto min-h-screen">
+<div class="text-center mb-12 sm:mb-20">
+<h2 class="font-header text-3xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tighter">BIENVENIDO A <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">CHASQUILLA.COM</span></h2>
+<p class="text-base sm:text-lg md:text-xl text-stone-500 dark:text-stone-400 max-w-2xl mx-auto font-light">Servicios profesionales de remodelación con un enfoque tecnológico. <span class="text-primary font-medium">Rápido, confiable y transparente.</span></p>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-16">
+<!-- Card 1: Servicios Completos -->
+<div class="group bg-white/50 dark:bg-stone-900/50 border border-primary/10 rounded-2xl p-6 sm:p-8 hover:border-primary/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer" onclick="openServiciosModal()">
+<div class="flex items-start gap-2 sm:gap-3 mb-3 sm:mb-4">
+<span class="material-icons text-3xl text-primary group-hover:scale-110 transition-transform">build</span>
+<h3 class="font-header text-lg sm:text-xl font-bold">Servicios Completos</h3>
+</div>
+<p class="text-sm text-stone-500 dark:text-stone-400 mb-6 leading-relaxed">Plomería, Electricidad, Pintura y reformas completas con profesionales certificados.</p>
+<div class="text-primary font-bold inline-flex items-center gap-2 text-sm">Ver más <span class="material-icons text-xs group-hover:translate-x-1 transition-transform">arrow_forward</span></div>
+</div>
+
+<!-- Card 2: Velocidad -->
+<div class="group bg-white/50 dark:bg-stone-900/50 border border-primary/10 rounded-2xl p-6 sm:p-8 hover:border-primary/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer" onclick="openSolucionesModal()">
+<div class="flex items-start gap-2 sm:gap-3 mb-3 sm:mb-4">
+<span class="material-icons text-3xl text-primary group-hover:scale-110 transition-transform">flash_on</span>
+<h3 class="font-header text-lg sm:text-xl font-bold">Soluciones Rápidas</h3>
+</div>
+<p class="text-sm text-stone-500 dark:text-stone-400 mb-6 leading-relaxed">Respuesta inmediata. Diagnóstico ágil y presupuestos transparentes sin compromiso.</p>
+<div class="text-primary font-bold inline-flex items-center gap-2 text-sm">Solicitar <span class="material-icons text-xs group-hover:translate-x-1 transition-transform">arrow_forward</span></div>
+</div>
+
+<!-- Card 3: Confianza -->
+<div class="group bg-white/50 dark:bg-stone-900/50 border border-primary/10 rounded-2xl p-6 sm:p-8 hover:border-primary/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer" onclick="openGarantiaDetalle()">
+<div class="flex items-start gap-2 sm:gap-3 mb-3 sm:mb-4">
+<span class="material-icons text-3xl text-primary group-hover:scale-110 transition-transform">verified</span>
+<h3 class="font-header text-lg sm:text-xl font-bold">Garantía Total</h3>
+</div>
+<p class="text-sm text-stone-500 dark:text-stone-400 mb-6 leading-relaxed">Más de 120 proyectos exitosos. Profesionalismo y respaldo técnico en cada entrega.</p>
+<div class="text-primary font-bold inline-flex items-center gap-2 text-sm">Conocer más <span class="material-icons text-xs group-hover:translate-x-1 transition-transform">arrow_forward</span></div>
+</div>
+
+<!-- Card 4: Tecnología -->
+<div class="group bg-white/50 dark:bg-stone-900/50 border border-primary/10 rounded-2xl p-6 sm:p-8 hover:border-primary/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer" onclick="document.getElementById('remodelaciones-futuro').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'nearest'})">
+<div class="flex items-start gap-2 sm:gap-3 mb-3 sm:mb-4">
+<span class="material-icons text-3xl text-primary group-hover:scale-110 transition-transform">memory</span>
+<div>
+<h3 class="font-header text-lg sm:text-xl font-bold">Tecnología</h3>
+<div class="inline-block px-2 py-0.5 bg-yellow-100 text-yellow-800 text-[10px] font-bold rounded-full mt-1">COMING SOON</div>
+</div>
+</div>
+<p class="text-sm text-stone-500 dark:text-stone-400 mb-6 leading-relaxed">Herramientas de visualización IA para remodelaciones inteligentes y precisas.</p>
+<div class="text-primary font-bold inline-flex items-center gap-2 text-sm">Próximamente <span class="material-icons text-xs">schedule</span></div>
+</div>
+
+<!-- Card 6: Proceso -->
+<div class="group bg-white/50 dark:bg-stone-900/50 border border-primary/10 rounded-2xl p-6 sm:p-8 hover:border-primary/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer" onclick="openProcesoDetalle()">
+<div class="flex items-start gap-2 sm:gap-3 mb-3 sm:mb-4">
+<span class="material-icons text-3xl text-primary group-hover:scale-110 transition-transform">timeline</span>
+<h3 class="font-header text-lg sm:text-xl font-bold">Proceso Simple</h3>
+</div>
+<p class="text-sm text-stone-500 dark:text-stone-400 mb-6 leading-relaxed">Metodología optimizada paso a paso para garantizar transparencia y tranquilidad.</p>
+<div class="text-primary font-bold inline-flex items-center gap-2 text-sm">Ver proceso <span class="material-icons text-xs group-hover:translate-x-1 transition-transform">arrow_forward</span></div>
+</div>
+
+<!-- Card 7: Salón de la Fama -->
+<div class="group bg-white/50 dark:bg-stone-900/50 border border-primary/10 rounded-2xl p-6 sm:p-8 hover:border-primary/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer" onclick="openSalonModal()">
+<div class="flex items-start gap-2 sm:gap-3 mb-3 sm:mb-4">
+<span class="material-icons text-3xl text-primary group-hover:scale-110 transition-transform">military_tech</span>
+<h3 class="font-header text-lg sm:text-xl font-bold">Salón de Fama</h3>
+</div>
+<p class="text-sm text-stone-500 dark:text-stone-400 mb-6 leading-relaxed">Explora nuestras transformaciones más impactantes e inspírate para tu proyecto.</p>
+<div class="text-primary font-bold inline-flex items-center gap-2 text-sm">Ver Proyectos <span class="material-icons text-xs group-hover:translate-x-1 transition-transform">arrow_forward</span></div>
+</div>
+</div>
+
+<div class="text-center">
+<button onclick="openSolucionesModal()" class="glow-btn-primary bg-primary text-white px-8 py-5 rounded-xl font-header font-bold text-lg flex items-center justify-center gap-3 group overflow-hidden relative mx-auto hover:bg-orange-600 transition-all active:scale-95">
+<div class="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
+<span class="material-icons">start</span>
+COMENZAR AHORA
+</button>
+</div>
+</section>
+
+<!-- Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 px-4 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between glass-nav border border-primary/5 rounded-2xl px-6 py-3 shadow-lg">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-[0_4px_10px_rgba(249,122,31,0.4)] transition-all">
+                    CH
+                </div>
+<a href="#inicio" class="font-header font-bold text-base sm:text-xl tracking-tighter hover:text-primary transition-colors">CHASQUILLA<span class="text-primary">.COM</span></a>
+</div>
+<div class="hidden md:flex items-center gap-8 font-medium text-sm tracking-wide">
+<a class="hover:text-primary transition-colors" href="#inicio">INICIO</a>
+<a class="hover:text-primary transition-colors cursor-pointer" onclick="openServiciosModal()">SERVICIOS</a>
+<a class="hover:text-primary transition-colors cursor-pointer" onclick="openSalonModal()">SALÓN DE LA FAMA</a>
+</div>
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden absolute top-full left-0 right-0 bg-white dark:bg-stone-900 border-b border-primary/10 mt-2 rounded-lg shadow-lg md:hidden">
+<div class="p-4 space-y-3">
+<a class="block hover:text-primary transition-colors" href="#inicio" onclick="toggleMobileMenu()">INICIO</a>
+<a class="block hover:text-primary transition-colors cursor-pointer" onclick="openServiciosModal(); toggleMobileMenu()">SERVICIOS</a>
+<a class="block hover:text-primary transition-colors cursor-pointer" onclick="openSalonModal(); toggleMobileMenu()">SALÓN DE LA FAMA</a>
+<hr class="border-primary/10 my-2">
+<button class="w-full bg-primary text-white px-4 py-2 rounded-lg font-bold text-sm tracking-wider hover:bg-orange-600 transition-all flex items-center justify-center gap-2" onclick="openContactoModal(); toggleMobileMenu()">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+            </svg>
+            CONTACTANOS
+          </button>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-2 lg:gap-4">
+<div class="flex gap-2 items-center opacity-40 pr-4 border-r border-primary/20">
+<span class="material-icons text-sm">security</span>
+<span class="material-icons text-sm">hub</span>
+<span class="material-icons text-sm">data_exploration</span>
+</div>
+<button class="bg-primary text-white px-5 py-2 rounded-lg font-bold text-sm tracking-wider hover:bg-orange-600 transition-all flex items-center gap-2" onclick="openContactoModal()">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+            </svg>
+            <span class="hidden sm:inline">CONTACTANOS</span>
+          </button>
+</div>
+</div>
+</nav>
+
+<!-- Main Hero Section -->
+
+<main id="remodelaciones-futuro" class="relative pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 sm:gap-12 min-h-screen lg:min-h-[90vh]">
+<!-- Left Content -->
+<div class="flex-1 z-10 text-center lg:text-left w-full">
+<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold mb-4 sm:mb-6 border border-primary/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-40"></span>
+<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary"></span>
+</span>
+          SISTEMA V1.0
+        </div>
+<h1 class="font-header text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-6">
+          REMODELACIONES <br class="hidden sm:block"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">DEL FUTURO</span>
+</h1>
+<p class="text-sm sm:text-base md:text-lg lg:text-xl text-stone-600 dark:text-stone-400 mb-8 sm:mb-10 max-w-2xl font-light px-2 sm:px-0">
+          Plomería, Electricidad, Pintura y más. Soluciones rápidas. <span class="font-bold text-stone-800 dark:text-white">Nosotros nos encargamos.</span>
+</p>
+<div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start w-full">
+<button class="glow-btn-primary bg-primary text-white px-8 py-4 sm:py-5 rounded-xl font-header font-bold text-sm sm:text-lg flex items-center justify-center gap-3 group overflow-hidden relative" onclick="openDesarrolloModal()">
+<div class="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
+<span class="material-icons">radar</span>
+            <span>COMENZAR ESCANEO</span>
+          </button>
+<button class="bg-white/80 dark:bg-stone-800 border border-primary/20 hover:border-primary/60 hover:shadow-lg px-8 py-4 sm:py-5 rounded-xl font-header font-bold text-sm sm:text-lg flex items-center justify-center gap-3 transition-all" onclick="openProyectosModal()">
+            <span>VER PROYECTOS</span>
+          </button>
+</div>
+<div class="mt-8 sm:mt-12 flex flex-col sm:flex-row flex-wrap items-center gap-4 sm:gap-8 justify-center lg:justify-start">
+<div class="text-center lg:text-left">
+<div class="text-primary font-header text-xl sm:text-2xl font-bold">120+</div>
+<div class="text-xs uppercase tracking-widest text-stone-500 font-bold">Espacios Digitalizados</div>
+</div>
+<div class="hidden sm:block h-10 w-[1px] bg-primary/20"></div>
+<div class="text-center lg:text-left">
+<div class="text-primary font-header text-xl sm:text-2xl font-bold">0.02s</div>
+<div class="text-xs uppercase tracking-widest text-stone-500 font-bold">Latencia IA Render</div>
+</div>
+<div class="hidden sm:block h-10 w-[1px] bg-primary/20"></div>
+<div class="text-center lg:text-left">
+<div class="text-primary font-header text-xl sm:text-2xl font-bold">100%</div>
+<div class="text-xs uppercase tracking-widest text-stone-500 font-bold">Trustless Contracts</div>
+</div>
+</div>
+</div>
+<!-- Right Content - The Scanner & HUD -->
+<div class="flex-1 relative w-full max-w-md sm:max-w-2xl">
+<!-- Main Hero Image Container -->
+<div class="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl bg-stone-200 aspect-[4/5] lg:aspect-square">
+<video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+  <source src="git-1.mp4" type="video/mp4">
+</video>
+<!-- Scanning Laser Line Overlay -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="absolute top-0 left-1/2 w-[2px] h-full bg-primary laser-scan transition-all duration-1000"></div>
+<!-- Technical HUD Overlays (Left Side - Scanned) -->
+<div class="absolute top-[20%] left-[10%] bg-black/60 backdrop-blur-md p-2 rounded border border-primary/30 text-[10px] text-primary font-mono space-y-1">
+<div class="flex justify-between gap-4"><span>COOR:</span> <span>33.4489° S</span></div>
+<div class="flex justify-between gap-4"><span>MAT:</span> <span>MARMOL_TECH_v2</span></div>
+<div class="flex justify-between gap-4"><span>COST:</span> <span>0.42 ETH</span></div>
+</div>
+<!-- Floating Point -->
+<div class="absolute bottom-[40%] left-[25%] flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary animate-pulse border-2 border-white"></div>
+<div class="h-[1px] w-12 bg-primary"></div>
+<span class="text-[10px] font-bold bg-primary text-white px-2 py-1 rounded">REVESTIMIENTO 3D</span>
+</div>
+<!-- Blueprint Effect (Right Side - Scanning) -->
+<div class="absolute inset-y-0 right-0 left-1/2 bg-primary/10 backdrop-invert-[0.1] mix-blend-overlay"></div>
+</div>
+</div>
+</div>
+</main>
+<!-- Tech Partner Strip (Bottom) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12 border-t border-primary/5">
+<div class="flex flex-wrap justify-center lg:justify-between items-center gap-4 sm:gap-6 lg:gap-8 opacity-40 grayscale hover:grayscale-0 transition-all">
+<div class="flex items-center gap-1 sm:gap-2">
+<span class="material-icons text-2xl sm:text-3xl">home_repair_service</span>
+<span class="font-header font-bold text-sm sm:text-lg lg:text-xl">BLOCKCHAIN_RENO</span>
+</div>
+<div class="flex items-center gap-1 sm:gap-2">
+<span class="material-icons text-2xl sm:text-3xl">view_in_ar</span>
+<span class="font-header font-bold text-sm sm:text-lg lg:text-xl">ARCHI_VISION</span>
+</div>
+<div class="flex items-center gap-1 sm:gap-2">
+<span class="material-icons text-2xl sm:text-3xl">memory</span>
+<span class="font-header font-bold text-sm sm:text-lg lg:text-xl">CHIP_CORE</span>
+</div>
+<div class="flex items-center gap-1 sm:gap-2">
+<span class="material-icons text-2xl sm:text-3xl">cloud_sync</span>
+<span class="font-header font-bold text-sm sm:text-lg lg:text-xl">SMART_CONTRACTS</span>
+</div>
+<div class="flex items-center gap-1 sm:gap-2">
+<span class="material-icons text-2xl sm:text-3xl">webhook</span>
+<span class="font-header font-bold text-sm sm:text-lg lg:text-xl">AI_CONSTRUCT</span>
+</div>
+</div>
+</section>
+<!-- HUD Footer Decorations -->
+<div class="fixed bottom-3 sm:bottom-4 left-3 sm:left-4 flex flex-col gap-1 text-[7px] sm:text-[8px] font-mono text-stone-400 uppercase pointer-events-none">
+<div>Status: Online</div>
+<div>Encryption: RSA-4096</div>
+<div>Session: 8829-AF-992</div>
+</div>
+
+<!-- Modal: Salón de la Fama -->
+<div id="salonModal" class="hidden fixed inset-0 bg-black/50 z-50 flex justify-center items-center overflow-y-auto" onclick="closeSalonModal()">
+  <div class="bg-white dark:bg-stone-900 rounded-2xl shadow-2xl w-11/12 max-w-5xl max-h-[90vh] overflow-y-auto m-auto my-8" onclick="event.stopPropagation()">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-primary to-orange-400 p-6 flex justify-between items-center sticky top-0 z-10">
+      <div class="flex items-center gap-3">
+        <span class="material-icons text-4xl text-white">military_tech</span>
+        <div>
+          <h2 class="font-header text-3xl font-bold text-white">Salón de la Fama</h2>
+          <p class="text-sm text-white/80">Nuestros proyectos más innovadores</p>
+        </div>
+      </div>
+      <button onclick="closeSalonModal()" class="hover:bg-white/20 p-2 rounded-lg transition">
+        <span class="material-icons text-white">close</span>
+      </button>
+    </div>
+
+    <!-- Content -->
+    <div class="p-8">
+      <!-- Development Notice -->
+      <div class="mb-8 p-6 bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 rounded-lg">
+        <div class="flex items-start gap-3">
+          <span class="material-icons text-yellow-600 dark:text-yellow-400 text-2xl flex-shrink-0">construction</span>
+          <div>
+            <h3 class="font-bold text-yellow-900 dark:text-yellow-300 text-lg">Estamos Trabajando en Ello</h3>
+            <p class="text-yellow-800 dark:text-yellow-200 text-sm mt-1">Esta sección está en desarrollo. Pronto podrás ver y votar por los proyectos más destacados de nuestra comunidad.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intro Section -->
+      <div class="text-center mb-8">
+        <span class="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-bold tracking-widest uppercase mb-4">Temporada 4: Cyber Renovación</span>
+        <h3 class="text-2xl md:text-3xl font-bold text-stone-900 dark:text-white mb-3">
+          Explora las Transformaciones <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Más Radicales</span>
+        </h3>
+        <p class="text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">Descubre nuestros proyectos más destacados. Vota por los que más te inspiren y ayuda a impulsar innovación.</p>
+      </div>
+
+      <!-- Featured Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <!-- Project Card 1 -->
+        <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all h-64 flex flex-col">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA87gp5ufNcB0OlywUjxF4y-FadnkQg4h1HTIsbJTA-MVxiOFj1bg1FVlar6RWpZ9QqrD4VKVS5--oBEa-p3nWSAPxsug90chjqugT_yATkP-KHsTqOqh-GJZZtFIfpfKbKV68CUEPzNgK7H6A_u4TPJJ8HyNDLMYMUBBgEUUQGtc695JqEGiAFTjQTeNcTf28DLp2Iy6bfHAKDlXysaX6Te-dj3oiewEto5XWNZbgVta_vn785b230kxEZPEEHzh8f7nAwrcpmN8w" alt="Cocina Cyberpunk" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-icons text-primary text-sm">military_tech</span>
+              <span class="text-xs font-bold text-primary uppercase">ÉLITE</span>
+            </div>
+            <h4 class="text-white font-bold text-lg">Cocina Cyberpunk 2077</h4>
+            <p class="text-white/80 text-xs">2.4k Puntos • @dev_construct</p>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all h-64 flex flex-col">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6OjE8IJf80HBc2ofs5cbKADbr_GbM5fPr1fyWj8mS45TV4IleG87FGnveMpvoF0qUgp5tp_mKaADkBm0pQJzmZG6pLPRVJbmz5-woKk-7MAuW1ZEnKjzzp8ednoW3w6SwHHItff5Wu2_OAiuygA9ERqayDxgLNm86d39nRmgsEzH3cGJYAp869FY36DLA2UUaIYJxrRjmdWqYl40n-uUvVXsJHbJHFtRBxpuAUFs-aCUScGNe_FborxA2Ukf56xp0EeZ1cwEB4po" alt="Sala Minimalista" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <h4 class="text-white font-bold text-lg">Sala Minimalista Zen</h4>
+            <p class="text-white/80 text-xs">856 Puntos • @ana_designs</p>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all h-64 flex flex-col">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuADIWtjH9Mf21JwB1B5yjJIruyY4Yz3vwJ7QdBCex9WEcMcHtkQttyer4X0QZ9F-s1xEu8HCyeYFdXqxRUyLw0RLi6aiEkWLqHXkefj4ZTziw9U-Onm5aFk4a7vFJ40qVG380Exa42zLpXHZP3Z-Gay9n_0OBy1OwvaDNz5J6KQd4_15hki-a3hcK-cdUrxF50vtXyV7NfpAHr7wtNNQN5Jns46xkgqgMIc0vzP1PnxSemO2rwaXh7JHQ8E4OUpW4PY7akywdBj63A" alt="Baño Spa Smart" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <h4 class="text-white font-bold text-lg">Baño Spa Smart</h4>
+            <p class="text-white/80 text-xs">1.1k Puntos • @tech_bath</p>
+          </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all h-64 flex flex-col">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4RKo6wwTQIa4RHFF_ASsLs-YKA-Hn-WyTLz_jJKH1cdyoDO-dewtceH5TiPthKNA3AVwkVEIqn669hYnE81WoKm2n_m2t4AgTjLOfu-O_zcqeOdJhTOnoOULFPGO45wvJKuAC_eIjB9CRaZghI65gmwoYcNK-h5VGITMgqcXpmvBBIFkcKqVrmzULVLBSobGsHej9aMcbWxmojL0D8OVjDiaWy94ug7BJQxzX4NfPr3kk1Kgu1E3HVfqG_vmmK9cUq2qRVVrIf9w" alt="Oasis Urbano" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <h4 class="text-white font-bold text-lg">Oasis Urbano</h4>
+            <p class="text-white/80 text-xs">640 Puntos • @green_thumb</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="bg-primary/5 border border-primary/20 rounded-xl p-6 mb-8">
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div>
+            <div class="text-2xl font-bold text-primary mb-1">120+</div>
+            <p class="text-xs text-stone-600 dark:text-stone-400">Proyectos Destacados</p>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-primary mb-1">12.5k</div>
+            <p class="text-xs text-stone-600 dark:text-stone-400">Votos Totales</p>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-primary mb-1">4/4</div>
+            <p class="text-xs text-stone-600 dark:text-stone-400">Temporada Activa</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="../salón_de_la_fama_-_votaciones_chasquilla_1/salondefama.html" target="_blank" class="flex-1 bg-primary hover:bg-orange-600 text-white px-6 py-4 rounded-lg font-header font-bold text-center transition-all flex items-center justify-center gap-2">
+          <span class="material-icons">open_in_new</span>
+          Ver Galería Completa
+        </a>
+        <button onclick="closeSalonModal()" class="flex-1 border border-primary/20 text-primary hover:bg-primary/10 px-6 py-4 rounded-lg font-header font-bold transition-all">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script para Modal Salón de la Fama -->
+<script>
+function openSalonModal() {
+  document.getElementById('salonModal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSalonModal() {
+  document.getElementById('salonModal').classList.add('hidden');
+  document.body.style.overflow = 'auto';
+}
+</script>
+
+<!-- Modal: Contacto -->
+<div id="contactoModal" class="hidden fixed inset-0 bg-black/50 z-50 flex justify-center items-center" onclick="closeContactoModal()">
+  <div class="bg-gradient-to-br from-primary to-orange-500 rounded-2xl shadow-2xl w-11/12 max-w-md" onclick="event.stopPropagation()">
+    <!-- Header -->
+    <div class="p-6 text-center">
+      <div class="flex justify-center mb-4">
+        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+          <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </div>
+      </div>
+      <h2 class="text-3xl font-bold text-white mb-2">¡Contactanos!</h2>
+      <p class="text-white/90 text-lg mb-6">Estamos aquí para ayudarte</p>
+      
+      <!-- Email -->
+      <div class="bg-white/10 rounded-xl p-6 mb-6">
+        <div class="text-center">
+          <div class="text-white/80 text-sm mb-2">Envíanos un email a:</div>
+          <div class="text-2xl font-bold text-white tracking-wide">chasquilla.com@gmail.com</div>
+        </div>
+      </div>
+      
+      <!-- Botones -->
+      <div class="flex gap-3">
+        <button onclick="closeContactoModal()" class="flex-1 bg-white/20 hover:bg-white/30 text-white py-3 rounded-lg font-bold transition-all">
+          Cerrar
+        </button>
+        <button onclick="window.location.href='mailto:chasquilla.com@gmail.com'" class="flex-1 bg-white text-primary py-3 rounded-lg font-bold hover:bg-gray-100 transition-all">
+          Enviar Email
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: En Desarrollo -->
+<div id="desarrolloModal" class="hidden fixed inset-0 bg-black/50 z-50 flex justify-center items-center" onclick="closeDesarrolloModal()">
+  <div class="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl shadow-2xl w-11/12 max-w-sm" onclick="event.stopPropagation()">
+    <!-- Header -->
+    <div class="p-6 text-center">
+      <div class="flex justify-center mb-4">
+        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+          <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </div>
+      </div>
+      <h2 class="text-3xl font-bold text-white mb-2">EN DESARROLLO</h2>
+      <p class="text-white/90 text-lg mb-6">Esta funcionalidad estará disponible próximamente</p>
+      
+      <!-- Botón -->
+      <button onclick="closeDesarrolloModal()" class="w-full bg-white text-yellow-600 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all">
+        Entendido
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Nuestros Servicios -->
+<div id="proyectosModal" class="hidden fixed inset-0 bg-black/50 z-50 flex justify-center items-center overflow-y-auto" onclick="closeProyectosModal()">
+  <div class="bg-white dark:bg-stone-900 rounded-2xl shadow-2xl w-11/12 max-w-6xl max-h-[90vh] overflow-y-auto m-auto my-8" onclick="event.stopPropagation()">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-primary to-orange-400 p-6 flex justify-between items-center sticky top-0 z-10">
+      <div class="flex items-center gap-3">
+        <span class="material-icons text-4xl text-white">build</span>
+        <div>
+          <h2 class="font-header text-3xl font-bold text-white">Nuestros Servicios</h2>
+          <p class="text-sm text-white/80">Descubre todas nuestras soluciones profesionales</p>
+        </div>
+      </div>
+      <button onclick="closeProyectosModal()" class="hover:bg-white/20 p-2 rounded-lg transition">
+        <span class="material-icons text-white">close</span>
+      </button>
+    </div>
+
+    <!-- Content -->
+    <div class="p-8">
+      <!-- Servicio 1: Soluciones Rápidas -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold mb-4 text-primary">Soluciones Rápidas</h3>
+        <p class="text-stone-600 dark:text-stone-400 mb-6">Respuesta inmediata a tus necesidades de reparación y mantenimiento.</p>
+        <div class="grid grid-cols-5 gap-4">
+          <div class="relative">
+            <img src="IMG-1.JPEG" alt="Reparación rápida 1" class="w-full h-32 object-cover rounded-lg border-4 border-primary" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="IMG-2.JPG" alt="Reparación rápida 2" class="w-full h-32 object-cover rounded-lg border-4 border-primary" loading="lazy">
+            <span class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded">Destacado</span>
+          </div>
+          <div class="relative">
+            <img src="IMG-3.JPEG" alt="Reparación rápida 3" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="IMG-4.JPEG" alt="Reparación rápida 4" class="w-full h-32 object-cover rounded-lg border-4 border-primary" loading="lazy">
+            <span class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded">Destacado</span>
+          </div>
+          <div class="relative">
+            <img src="IMG-5.JPG" alt="Reparación rápida 5" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 2: Garantía Total -->
+      <div class="mb-12">
+        <div class="grid grid-cols-5 gap-4">
+          <div class="relative">
+            <img src="gar.1.jpg" alt="Garantía 1" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="gar.2.jpg" alt="Garantía 2" class="w-full h-32 object-cover rounded-lg border-4 border-primary" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="GAR.3.JPG" alt="Garantía 3" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="GAR.5.JPG" alt="Garantía 4" class="w-full h-32 object-cover rounded-lg border-4 border-primary" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="GAR.4.JPG" alt="Garantía 5" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 3: Tecnología Avanzada -->
+      <div class="mb-12">
+        <div class="grid grid-cols-5 gap-4">
+          <div class="relative">
+            <img src="tec-5.jpeg" alt="Tecnología 1" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="tec-4.jpeg" alt="Tecnología 2" class="w-full h-32 object-cover rounded-lg border-4 border-primary" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="tec-3.jpg" alt="Tecnología 3" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="tec-2.jpg" alt="Tecnología 4" class="w-full h-32 object-cover rounded-lg border-4 border-primary" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="tec-1.jpeg" alt="Tecnología 5" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 4: Equipo Profesional -->
+      <div id="equipoSection" class="mb-12">
+        <div class="grid grid-cols-5 gap-4">
+          <div class="relative">
+            <img src="EQUI-1.JPG" alt="Equipo 1" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="EQUI-2.JPG" alt="Equipo 2" class="w-full h-32 object-cover rounded-lg border-4 border-primary" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="EQUI-3.JPG" alt="Equipo 3" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="EQUI-4.JPG" alt="Equipo 4" class="w-full h-32 object-cover rounded-lg border-4 border-primary" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="EQUI-5.JPG" alt="Equipo 5" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 5: Proceso Simple -->
+      <div class="mb-12">
+        <h3 id="procesoSection" class="text-2xl font-bold mb-4 text-primary">Proceso Simple</h3>
+        <div class="grid grid-cols-5 gap-4">
+          <div class="relative">
+            <img src="pro-1.jpg" alt="Proceso 1" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="pro-2.jpg" alt="Proceso 2" class="w-full h-32 object-cover rounded-lg border-4 border-primary" loading="lazy">
+            <span class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded">Destacado</span>
+          </div>
+          <div class="relative">
+            <img src="pro-3.jpg" alt="Proceso 3" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="pro-4.jpg" alt="Proceso 4" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+            <span class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded">Destacado</span>
+          </div>
+          <div class="relative">
+            <img src="pro-5.jpg" alt="Proceso 5" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 6: Salón de la Fama -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold mb-4 text-primary">Salón de la Fama</h3>
+        <p class="text-stone-600 dark:text-stone-400 mb-6">Explora nuestros proyectos más innovadores y vota por los que te inspiren.</p>
+        <div class="grid grid-cols-5 gap-4">
+          <div class="relative">
+            <img src="salon-1.jpg" alt="Salón 1" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="salon-2.jpg" alt="Salón 2" class="w-full h-32 object-cover rounded-lg border-4 border-primary" loading="lazy">
+            <span class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded">Destacado</span>
+          </div>
+          <div class="relative">
+            <img src="salon-3.jpg" alt="Salón 3" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="relative">
+            <img src="salon-4.jpg" alt="Salón 4" class="w-full h-32 object-cover rounded-lg border-4 border-primary" loading="lazy">
+            <span class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded">Destacado</span>
+          </div>
+          <div class="relative">
+            <img src="salon-5.jpeg" alt="Salón 5" class="w-full h-32 object-cover rounded-lg" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Garantía Total (Manifiesto) -->
+<div id="garantiaModal" class="hidden fixed inset-0 bg-black/50 z-[60] flex justify-center items-center overflow-y-auto" onclick="closeGarantiaModal()">
+  <div class="bg-white dark:bg-stone-900 rounded-2xl shadow-2xl w-11/12 max-w-4xl max-h-[90vh] overflow-y-auto m-auto my-8" onclick="event.stopPropagation()">
+    <div class="bg-gradient-to-r from-primary to-orange-400 p-6 flex justify-between items-center sticky top-0 z-10">
+      <div class="flex items-center gap-3 text-white">
+        <span class="material-icons text-4xl">verified_user</span>
+        <div>
+          <h2 class="font-header text-3xl font-bold uppercase tracking-tighter">GARANTÍA TOTAL</h2>
+          <p class="text-sm opacity-80 uppercase tracking-widest">Manifiesto de Integridad</p>
+        </div>
+      </div>
+      <button onclick="closeGarantiaModal()" class="hover:bg-white/20 p-2 rounded-lg transition text-white">
+        <span class="material-icons">close</span>
+      </button>
+    </div>
+    <div class="p-8 md:p-12">
+      <article class="max-w-none">
+        <h2 class="font-header text-xl md:text-2xl font-bold text-primary mb-8 uppercase tracking-widest italic border-b border-primary/20 pb-4">
+          Compromiso de Excelencia: Ética y Garantía
+        </h2>
+        
+        <div class="space-y-8 text-stone-700 dark:text-stone-300 leading-relaxed text-justify text-base md:text-lg">
+          <p class="italic font-medium border-l-4 border-primary pl-6 py-2 bg-stone-50 dark:bg-stone-800/30 rounded-r-lg">
+            "En la intersección entre la técnica artesanal y la precisión digital, reside nuestro compromiso inquebrantable con la integridad de su hogar."
+          </p>
+          
+          <p>
+            En <span class="text-primary font-bold">Chasquilla.com</span>, nuestra <strong>Ética Profesional</strong> se fundamenta en tres pilares innegociables:
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+            <div class="p-6 bg-stone-50 dark:bg-stone-800/50 rounded-2xl border border-primary/5 text-center">
+                <span class="material-icons text-primary text-3xl mb-3">visibility</span>
+                <div class="font-header font-bold text-primary text-[10px] uppercase tracking-widest">Transparencia Radical</div>
+                <p class="text-xs mt-2 opacity-70">Desglose honesto de materiales y tiempos.</p>
+            </div>
+            <div class="p-6 bg-stone-50 dark:bg-stone-800/50 rounded-2xl border border-primary/5 text-center">
+                <span class="material-icons text-primary text-3xl mb-3">straighten</span>
+                <div class="font-header font-bold text-primary text-[10px] uppercase tracking-widest">Rigurosidad Técnica</div>
+                <p class="text-xs mt-2 opacity-70">Mano de obra certificada bajo normativas.</p>
+            </div>
+            <div class="p-6 bg-stone-50 dark:bg-stone-800/50 rounded-2xl border border-primary/5 text-center">
+                <span class="material-icons text-primary text-3xl mb-3">home</span>
+                <div class="font-header font-bold text-primary text-[10px] uppercase tracking-widest">Respeto al Espacio</div>
+                <p class="text-xs mt-2 opacity-70">Protocolos estrictos de limpieza y orden.</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
+            <div class="p-8 rounded-2xl border border-primary/20 bg-white dark:bg-stone-800 shadow-xl">
+              <h3 class="font-header font-bold text-sm mb-4 uppercase tracking-widest text-primary flex items-center gap-2">
+                <span class="material-icons text-sm">shield</span> La Garantía como Certidumbre
+              </h3>
+              <p class="text-sm leading-relaxed opacity-80">Nuestra garantía no es una simple cláusula; es una póliza de tranquilidad. Aseguramos la estabilidad funcional de cada intervención por periodos extendidos post-entrega.</p>
+            </div>
+            <div class="p-8 rounded-2xl border border-primary/20 bg-white dark:bg-stone-800 shadow-xl">
+              <h3 class="font-header font-bold text-sm mb-4 uppercase tracking-widest text-primary flex items-center gap-2">
+                <span class="material-icons text-sm">support_agent</span> Soporte Post-Servicio
+              </h3>
+              <p class="text-sm leading-relaxed opacity-80">El fin de la obra es el inicio de nuestra relación. Contamos con un protocolo de seguimiento activo para verificar que la solución implementada resista el tiempo.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="mt-12 text-center">
+        <button onclick="closeGarantiaModal()" class="bg-primary hover:bg-orange-600 text-white px-10 py-4 rounded-xl font-header font-bold text-xs tracking-widest transition-all shadow-lg uppercase">Cerrar Manifiesto</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Detalle Proceso Simple -->
+<div id="procesoModal" class="hidden fixed inset-0 bg-black/50 z-50 flex justify-center items-center overflow-y-auto" onclick="closeProcesoModal()">
+  <div class="bg-white dark:bg-stone-900 rounded-2xl shadow-2xl w-11/12 max-w-4xl max-h-[90vh] overflow-y-auto m-auto my-8" onclick="event.stopPropagation()">
+    <div class="bg-gradient-to-r from-primary to-orange-400 p-6 flex justify-between items-center sticky top-0 z-10">
+      <div class="flex items-center gap-3 text-white">
+        <span class="material-icons text-4xl">timeline</span>
+        <div>
+          <h2 class="font-header text-3xl font-bold">Nuestro Método</h2>
+          <p class="text-sm opacity-80">De la Idea a la Realidad</p>
+        </div>
+      </div>
+      <button onclick="closeProcesoModal()" class="hover:bg-white/20 p-2 rounded-lg transition text-white">
+        <span class="material-icons">close</span>
+      </button>
+    </div>
+    <div class="p-8 md:p-12">
+      <article class="max-w-none mb-12">
+        <h3 class="font-header text-xl md:text-2xl font-bold text-primary mb-6 uppercase tracking-widest italic border-b border-primary/20 pb-4">Ensayo de Construcción Práctica: Nuestra Ruta al Éxito</h3>
+        <p class="text-stone-600 dark:text-stone-400 mb-10 text-lg leading-relaxed text-justify">
+          Transformar tu hogar no debe ser un dolor de cabeza, sino una experiencia emocionante. En <strong>Chasquilla.com</strong>, creemos que la clave de un buen trabajo no está solo en el martillo y los clavos, sino en la claridad absoluta. Hemos simplificado años de experiencia en construcción en un sistema de 5 pasos diseñado para que entiendas exactamente qué está pasando en tu casa, sin tecnicismos complejos ni sorpresas financieras.
+        </p>
+        <div class="bg-primary/5 p-6 rounded-xl border border-primary/10 mb-8 italic text-stone-700 dark:text-stone-300">
+          "Nuestra filosofía es simple: Si el cliente sabe qué esperar, el resultado es siempre una sonrisa. No solo construimos paredes, construimos tranquilidad a través de procesos transparentes y prácticos."
+        </div>
+      </article>
+
+      <div class="space-y-8">
+        <div class="flex gap-6 items-start group">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all duration-300">1</div>
+          <div>
+            <h4 class="font-header font-bold text-lg mb-1 uppercase tracking-tight">1. El Café de Ideas</h4>
+            <p class="text-stone-600 dark:text-stone-400 text-sm md:text-base leading-relaxed">Todo empieza con una conversación sencilla. Tú nos cuentas qué sueñas (ya sea un baño nuevo o pintar toda la casa) y nosotros te explicamos las posibilidades reales. Sin compromisos, solo soluciones.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start group">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all duration-300">2</div>
+          <div>
+            <h4 class="font-header font-bold text-lg mb-1 uppercase tracking-tight">2. El Chequeo de Salud</h4>
+            <p class="text-stone-600 dark:text-stone-400 text-sm md:text-base leading-relaxed">Revisamos la "salud" de tu hogar. Detectamos fallas ocultas en tuberías o cables antes de empezar para que el presupuesto inicial sea el definitivo, sin sorpresas.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start group">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all duration-300">3</div>
+          <div>
+            <h4 class="font-header font-bold text-lg mb-1 uppercase tracking-tight">3. El Plan de Juego</h4>
+            <p class="text-stone-600 dark:text-stone-400 text-sm md:text-base leading-relaxed">Te entregamos una hoja de ruta clara: qué materiales usaremos, cuánto costará y cuándo terminaremos. Una vez que nos das el "sí", agendamos las fechas cuidando no interrumpir tu rutina familiar.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start group">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all duration-300">4</div>
+          <div>
+            <h4 class="font-header font-bold text-lg mb-1 uppercase tracking-tight">4. Transformación Impecable</h4>
+            <p class="text-stone-600 dark:text-stone-400 text-sm md:text-base leading-relaxed">Nuestros maestros trabajan duro pero con orden extremo. Limpiamos cada día al terminar para que no sientas que vives en una zona de guerra. El respeto por tu espacio es nuestra prioridad.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start group">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl border border-primary/20 group-hover:bg-primary group-hover:text-white transition-all duration-300">5</div>
+          <div>
+            <h4 class="font-header font-bold text-lg mb-1 uppercase tracking-tight">5. La Gran Entrega</h4>
+            <p class="text-stone-600 dark:text-stone-400 text-sm md:text-base leading-relaxed">Revisamos juntos hasta el último rincón. No nos vamos hasta que tú digas "quedó perfecto". Así de simple, así de profesional.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 text-center">
+        <button onclick="closeProcesoModal()" class="bg-primary hover:bg-orange-600 text-white px-10 py-4 rounded-xl font-header font-bold text-xs tracking-widest transition-all shadow-lg uppercase">¡Vamos a ello!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Vista Previa de Imagen (Lightbox) -->
+<div id="imagePreviewModal" class="hidden fixed inset-0 bg-black/95 z-[70] flex justify-center items-center p-4 md:p-10 cursor-zoom-out" onclick="closeImagePreview()">
+  <div class="relative max-w-7xl w-full h-full flex items-center justify-center">
+    <img id="previewImage" src="" alt="Vista previa" class="max-w-full max-h-full object-contain rounded-xl shadow-[0_0_50px_rgba(249,122,31,0.6)] border-2 border-primary/50 ring-4 ring-primary/10 transition-all duration-500 scale-95 md:scale-100">
+    <button onclick="closeImagePreview()" class="absolute top-4 right-4 text-white hover:text-primary transition-all">
+      <span class="material-icons text-4xl">close</span>
+    </button>
+  </div>
+</div>
+
+<!-- Modal: Servicios Construcción -->
+<div id="serviciosModal" class="hidden fixed inset-0 bg-black/50 z-50 flex justify-center items-center" onclick="closeServiciosModal()">
+  <div class="bg-white dark:bg-stone-900 rounded-2xl shadow-2xl w-11/12 max-w-4xl max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-primary to-orange-400 p-6 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <span class="material-icons text-4xl text-white">build</span>
+        <h2 class="font-header text-3xl font-bold text-white">Servicios de Construcción</h2>
+      </div>
+      <button onclick="closeServiciosModal()" class="hover:bg-white/20 p-2 rounded-lg transition">
+        <span class="material-icons text-white">close</span>
+      </button>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="p-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- Plomería -->
+      <div class="border border-primary/20 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-icons text-2xl text-primary">plumbing</span>
+          <h3 class="font-bold text-lg">Plomería</h3>
+        </div>
+        <ul class="text-sm text-stone-600 dark:text-stone-400 space-y-1 mb-4">
+          <li>• Reparación de tuberías</li>
+          <li>• Instalación de sanitarios</li>
+          <li>• Desagües y sifones</li>
+        </ul>
+        <a href="https://wa.me/56920928095?text=Hola%20Chasquilla,%20me%20gustaría%20solicitar%20el%20servicio%20de%20Plomería." target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline text-sm">Solicitar servicio →</a>
+      </div>
+
+      <!-- Electricidad -->
+      <div class="border border-primary/20 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-icons text-2xl text-primary">electrical_services</span>
+          <h3 class="font-bold text-lg">Electricidad</h3>
+        </div>
+        <ul class="text-sm text-stone-600 dark:text-stone-400 space-y-1 mb-4">
+          <li>• Instalación de circuitos</li>
+          <li>• Cambio de interruptores</li>
+          <li>• Reparación de tableros</li>
+        </ul>
+        <a href="https://wa.me/56920928095?text=Hola%20Chasquilla,%20me%20gustaría%20solicitar%20el%20servicio%20de%20Electricidad." target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline text-sm">Solicitar servicio →</a>
+      </div>
+
+      <!-- Pintura -->
+      <div class="border border-primary/20 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-icons text-2xl text-primary">format_paint</span>
+          <h3 class="font-bold text-lg">Pintura</h3>
+        </div>
+        <ul class="text-sm text-stone-600 dark:text-stone-400 space-y-1 mb-4">
+          <li>• Preparación de superficies</li>
+          <li>• Pintura interior/exterior</li>
+          <li>• Acabados especiales</li>
+        </ul>
+        <a href="https://wa.me/56920928095?text=Hola%20Chasquilla,%20me%20gustaría%20solicitar%20el%20servicio%20de%20Pintura." target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline text-sm">Solicitar servicio →</a>
+      </div>
+
+      <!-- Carpintería -->
+      <div class="border border-primary/20 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-icons text-2xl text-primary">carpenter</span>
+          <h3 class="font-bold text-lg">Carpintería</h3>
+        </div>
+        <ul class="text-sm text-stone-600 dark:text-stone-400 space-y-1 mb-4">
+          <li>• Muebles a medida</li>
+          <li>• Puertas y marcos</li>
+          <li>• Acabados en madera</li>
+        </ul>
+        <a href="https://wa.me/56920928095?text=Hola%20Chasquilla,%20me%20gustaría%20solicitar%20el%20servicio%20de%20Carpintería." target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline text-sm">Solicitar servicio →</a>
+      </div>
+
+      <!-- Reformas Integrales -->
+      <div class="border border-primary/20 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-icons text-2xl text-primary">home_repair_service</span>
+          <h3 class="font-bold text-lg">Reformas Integrales</h3>
+        </div>
+        <ul class="text-sm text-stone-600 dark:text-stone-400 space-y-1 mb-4">
+          <li>• Remodelación completa</li>
+          <li>• Diseño personalizado</li>
+          <li>• Coordinación de proyectos</li>
+        </ul>
+        <a href="https://wa.me/56920928095?text=Hola%20Chasquilla,%20me%20gustaría%20solicitar%20el%20servicio%20de%20Reformas%20Integrales." target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline text-sm">Solicitar servicio →</a>
+      </div>
+
+      <!-- Mantenimiento -->
+      <div class="border border-primary/20 rounded-xl p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="material-icons text-2xl text-primary">handyman</span>
+          <h3 class="font-bold text-lg">Mantenimiento</h3>
+        </div>
+        <ul class="text-sm text-stone-600 dark:text-stone-400 space-y-1 mb-4">
+          <li>• Mantenimiento preventivo</li>
+          <li>• Reparaciones rápidas</li>
+          <li>• Inspecciones técnicas</li>
+        </ul>
+        <a href="https://wa.me/56920928095?text=Hola%20Chasquilla,%20me%20gustaría%20solicitar%20el%20servicio%20de%20Mantenimiento." target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline text-sm">Solicitar servicio →</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-stone-100 dark:bg-stone-800 p-6 text-center border-t">
+      <p class="text-sm text-stone-600 dark:text-stone-400">Selecciona alguno de nuestros servicios o</p>
+      <button onclick="closeServiciosModal(); openSolucionesModal()" class="text-primary font-bold hover:underline mt-2">contacta directamente por WhatsApp →</button>
+    </div>
+  </div>
+</div>
+
+<!-- Script para Modal -->
+<script>
+// Cerrar modal al presionar ESC
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeServiciosModal();
+    closeSolucionesModal();
+    closeSalonModal();
+    closeProyectosModal();
+    closeImagePreview();
+    closeProcesoModal();
+    closeGarantiaModal();
+  }
+});
+
+function openImagePreview(src) {
+  const modal = document.getElementById('imagePreviewModal');
+  const img = document.getElementById('previewImage');
+  img.src = src;
+  modal.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeImagePreview() {
+  document.getElementById('imagePreviewModal').classList.add('hidden');
+  // Solo restauramos el scroll si el modal de proyectos también está cerrado
+  if (document.getElementById('proyectosModal').classList.contains('hidden')) {
+    document.body.style.overflow = 'auto';
+  }
+}
+
+function setupImageZoom() {
+  const imgs = document.querySelectorAll('#proyectosModal img');
+  imgs.forEach(img => {
+    if (!img.dataset.zoomLoaded) {
+      img.classList.add('cursor-zoom-in', 'hover:ring-4', 'hover:ring-primary/50', 'transition-all', 'duration-300');
+      img.onclick = () => openImagePreview(img.src);
+      img.dataset.zoomLoaded = 'true';
+    }
+  });
+}
+
+// Cerrar modal al hacer clic fuera
+document.getElementById('serviciosModal')?.addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeServiciosModal();
+  }
+});
+</script>
+
+<!-- Modal Soluciones Rápidas -->
+<div id="solucionesModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+<div class="bg-white dark:bg-stone-900 rounded-2xl max-w-2xl w-full border border-primary/20">
+<!-- Header Modal -->
+<div class="bg-gradient-to-r from-primary to-orange-400 p-6 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-icons text-white text-3xl">flash_on</span>
+<h2 class="text-white font-header text-3xl font-bold">Soluciones Rápidas</h2>
+</div>
+<button onclick="closeSolucionesModal()" class="text-white hover:bg-white/20 p-2 rounded-lg transition-all">
+<span class="material-icons">close</span>
+</button>
+</div>
+
+<!-- Content -->
+<div class="p-8 space-y-6">
+<div class="text-center mb-8">
+<p class="text-lg text-stone-600 dark:text-stone-400 mb-2">Contacta con nosotros ahora por WhatsApp</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">Respuesta inmediata de nuestro equipo profesional</p>
+</div>
+
+<!-- WhatsApp Options -->
+<div class="space-y-4">
+<!-- Option 1: Emergencia -->
+<a href="https://wa.me/56920928095?text=Hola%20Chasquilla,%20tengo%20una%20emergencia%20de%20plomería/electricidad/pintura%20y%20necesito%20ayuda%20urgente." target="_blank" rel="noopener noreferrer" class="block border border-primary/20 rounded-lg p-6 hover:shadow-lg hover:border-primary/60 transition-all">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-icons text-2xl text-primary">emergency</span>
+<h3 class="font-bold text-lg">Emergencia</h3>
+</div>
+<p class="text-sm text-stone-600 dark:text-stone-400">Requiero atención urgente ahora</p>
+<div class="mt-3 flex items-center gap-2 text-primary font-bold text-sm">
+Contactar por WhatsApp <span class="material-icons text-sm">arrow_forward</span>
+</div>
+</a>
+
+<!-- Option 2: Diagnostico Rapido -->
+<a href="https://wa.me/56920928095?text=Hola%20Chasquilla,%20necesito%20un%20diagnóstico%20rápido%20para%20mi%20problema%20de%20reparación." target="_blank" rel="noopener noreferrer" class="block border border-primary/20 rounded-lg p-6 hover:shadow-lg hover:border-primary/60 transition-all">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-icons text-2xl text-primary">speed</span>
+<h3 class="font-bold text-lg">Diagnóstico Rápido</h3>
+</div>
+<p class="text-sm text-stone-600 dark:text-stone-400">Evalúa mi problemática y dame opciones</p>
+<div class="mt-3 flex items-center gap-2 text-primary font-bold text-sm">
+Contactar por WhatsApp <span class="material-icons text-sm">arrow_forward</span>
+</div>
+</a>
+
+<!-- Option 3: Presupuesto Economico -->
+<a href="https://wa.me/56920928095?text=Hola%20Chasquilla,%20busco%20la%20opción%20más%20económica%20para%20mi%20reparación." target="_blank" rel="noopener noreferrer" class="block border border-primary/20 rounded-lg p-6 hover:shadow-lg hover:border-primary/60 transition-all">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-icons text-2xl text-primary">attach_money</span>
+<h3 class="font-bold text-lg">Presupuesto Económico</h3>
+</div>
+<p class="text-sm text-stone-600 dark:text-stone-400">Necesito la solución más accesible</p>
+<div class="mt-3 flex items-center gap-2 text-primary font-bold text-sm">
+Contactar por WhatsApp <span class="material-icons text-sm">arrow_forward</span>
+</div>
+</a>
+
+<!-- Option 4: Consulta General -->
+<a href="https://wa.me/56920928095?text=Hola%20Chasquilla,%20me%20gustaría%20hacer%20una%20consulta%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" class="block border border-primary/20 rounded-lg p-6 hover:shadow-lg hover:border-primary/60 transition-all">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-icons text-2xl text-primary">chat_bubble</span>
+<h3 class="font-bold text-lg">Consulta General</h3>
+</div>
+<p class="text-sm text-stone-600 dark:text-stone-400">Tengo preguntas sobre los servicios</p>
+<div class="mt-3 flex items-center gap-2 text-primary font-bold text-sm">
+Contactar por WhatsApp <span class="material-icons text-sm">arrow_forward</span>
+</div>
+</a>
+</div>
+
+<div class="mt-6 text-center text-xs text-stone-500 dark:text-stone-400">
+<p>Disponibles 24/7 • Respuesta en menos de 5 minutos</p>
+<p class="mt-2">WhatsApp: <span class="font-bold">+56 9 2092 8095</span></p>
+</div>
+</div>
+
+<!-- Footer Modal -->
+<div class="border-t border-primary/20 p-6 bg-stone-50 dark:bg-stone-800/50 flex gap-4">
+<button onclick="closeSolucionesModal()" class="flex-1 border border-primary/20 text-primary py-3 rounded-lg hover:bg-primary/10 font-bold transition-all">Cerrar</button>
+</div>
+</div>
+</div>
+
+<!-- Script para Modal Soluciones -->
+<script>
+function openServiciosModal() {
+  document.getElementById('serviciosModal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeServiciosModal() {
+  document.getElementById('serviciosModal').classList.add('hidden');
+  document.body.style.overflow = 'auto';
+}
+
+function openSolucionesModal() {
+  document.getElementById('solucionesModal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSolucionesModal() {
+  document.getElementById('solucionesModal').classList.add('hidden');
+  document.body.style.overflow = 'auto';
+}
+
+// Cerrar modal al presionar ESC
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeSolucionesModal();
+  }
+});
+
+// Cerrar modal de garantía al hacer clic fuera
+document.getElementById('garantiaModal')?.addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeGarantiaModal();
+  }
+});
+
+// Cerrar modal al hacer clic fuera
+document.getElementById('solucionesModal')?.addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeSolucionesModal();
+  }
+});
+
+// Funciones Modal Contacto
+function openContactoModal() {
+  document.getElementById('contactoModal').classList.remove('hidden');
+}
+
+function closeContactoModal() {
+  document.getElementById('contactoModal').classList.add('hidden');
+}
+
+// Cerrar modal de contacto al hacer clic fuera
+document.getElementById('contactoModal')?.addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeContactoModal();
+  }
+});
+
+// Funciones Modal En Desarrollo
+function openDesarrolloModal() {
+  document.getElementById('desarrolloModal').classList.remove('hidden');
+}
+
+function closeDesarrolloModal() {
+  document.getElementById('desarrolloModal').classList.add('hidden');
+}
+
+// Cerrar modal de desarrollo al hacer clic fuera
+document.getElementById('desarrolloModal')?.addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeDesarrolloModal();
+  }
+});
+
+// Funciones Modal Proyectos
+function openProyectosModal() {
+  document.getElementById('proyectosModal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+  setupImageZoom();
+}
+
+function closeProyectosModal() {
+  document.getElementById('proyectosModal').classList.add('hidden');
+  document.body.style.overflow = 'auto';
+}
+
+// Función para toggle garantías
+function toggleGarantias() {
+  const details = document.getElementById('garantiasDetails');
+  details.classList.toggle('hidden');
+}
+
+function openGarantiaDetalle() {
+  document.getElementById('garantiaModal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeGarantiaModal() {
+  document.getElementById('garantiaModal').classList.add('hidden');
+  if (document.getElementById('proyectosModal').classList.contains('hidden')) {
+    document.body.style.overflow = 'auto';
+  }
+}
+
+function openEquipoDetalle() {
+  openProyectosModal();
+  setTimeout(() => {
+    document.getElementById('equipoSection')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, 300);
+}
+
+function openProcesoDetalle() {
+  document.getElementById('procesoModal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProcesoModal() {
+  document.getElementById('procesoModal').classList.add('hidden');
+  if (document.getElementById('proyectosModal').classList.contains('hidden')) {
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// Cerrar modal de proyectos al hacer clic fuera
+document.getElementById('proyectosModal')?.addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeProyectosModal();
+  }
+});
+</script>
+
+<!-- Botón Flotante WhatsApp -->
+<a href="https://wa.me/56920928095?text=Hola%20Chasquilla,%20me%20gustaría%20hacer%20una%20consulta" target="_blank" class="fixed bottom-8 right-8 z-40 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] animate-pulse">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp" class="w-16 h-16 rounded-full object-cover">
+</a>
+
+</body>
