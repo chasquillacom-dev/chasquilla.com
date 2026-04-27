@@ -406,19 +406,6 @@ COMENZAR AHORA
   </div>
 </div>
 
-<!-- Script para Modal Salón de la Fama -->
-<script>
-function openSalonModal() {
-  document.getElementById('salonModal').classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeSalonModal() {
-  document.getElementById('salonModal').classList.add('hidden');
-  document.body.style.overflow = 'auto';
-}
-</script>
-
 <!-- Modal: Contacto -->
 <div id="contactoModal" class="hidden fixed inset-0 bg-black/50 z-50 flex justify-center items-center" onclick="closeContactoModal()">
   <div class="bg-gradient-to-br from-primary to-orange-500 rounded-2xl shadow-2xl w-11/12 max-w-md" onclick="event.stopPropagation()">
@@ -900,61 +887,6 @@ function closeSalonModal() {
   </div>
 </div>
 
-<!-- Script para Modal -->
-<script>
-function toggleMobileMenu() {
-  const menu = document.getElementById('mobileMenu');
-  menu.classList.toggle('hidden');
-}
-
-// Cerrar modal al presionar ESC
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeServiciosModal();
-    closeSolucionesModal();
-    closeSalonModal();
-    closeProyectosModal();
-    closeImagePreview();
-    closeProcesoModal();
-    closeGarantiaModal();
-  }
-});
-
-function openImagePreview(src) {
-  const modal = document.getElementById('imagePreviewModal');
-  const img = document.getElementById('previewImage');
-  img.src = src;
-  modal.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeImagePreview() {
-  document.getElementById('imagePreviewModal').classList.add('hidden');
-  // Solo restauramos el scroll si el modal de proyectos también está cerrado
-  if (document.getElementById('proyectosModal').classList.contains('hidden')) {
-    document.body.style.overflow = 'auto';
-  }
-}
-
-function setupImageZoom() {
-  const imgs = document.querySelectorAll('#proyectosModal img');
-  imgs.forEach(img => {
-    if (!img.dataset.zoomLoaded) {
-      img.classList.add('cursor-zoom-in', 'hover:scale-[1.03]', 'hover:ring-4', 'hover:ring-primary/30', 'transition-all', 'duration-300');
-      img.onclick = () => openImagePreview(img.src);
-      img.dataset.zoomLoaded = 'true';
-    }
-  });
-}
-
-// Cerrar modal al hacer clic fuera
-document.getElementById('serviciosModal')?.addEventListener('click', function(e) {
-  if (e.target === this) {
-    closeServiciosModal();
-  }
-});
-</script>
-
 <!-- Modal Soluciones Rápidas -->
 <div id="solucionesModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
 <div class="bg-white dark:bg-stone-900 rounded-2xl max-w-2xl w-full border border-primary/20">
@@ -1040,143 +972,87 @@ Contactar por WhatsApp <span class="material-icons text-sm">arrow_forward</span>
 </div>
 </div>
 
-<!-- Script para Modal Soluciones -->
-<script>
-function openServiciosModal() {
-  document.getElementById('serviciosModal').classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeServiciosModal() {
-  document.getElementById('serviciosModal').classList.add('hidden');
-  document.body.style.overflow = 'auto';
-}
-
-function openSolucionesModal() {
-  document.getElementById('solucionesModal').classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeSolucionesModal() {
-  document.getElementById('solucionesModal').classList.add('hidden');
-  document.body.style.overflow = 'auto';
-}
-
-// Cerrar modal al presionar ESC
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeSolucionesModal();
-  }
-});
-
-// Cerrar modal de garantía al hacer clic fuera
-document.getElementById('garantiaModal')?.addEventListener('click', function(e) {
-  if (e.target === this) {
-    closeGarantiaModal();
-  }
-});
-
-// Cerrar modal al hacer clic fuera
-document.getElementById('solucionesModal')?.addEventListener('click', function(e) {
-  if (e.target === this) {
-    closeSolucionesModal();
-  }
-});
-
-// Funciones Modal Contacto
-function openContactoModal() {
-  document.getElementById('contactoModal').classList.remove('hidden');
-}
-
-function closeContactoModal() {
-  document.getElementById('contactoModal').classList.add('hidden');
-}
-
-// Cerrar modal de contacto al hacer clic fuera
-document.getElementById('contactoModal')?.addEventListener('click', function(e) {
-  if (e.target === this) {
-    closeContactoModal();
-  }
-});
-
-// Funciones Modal En Desarrollo
-function openDesarrolloModal() {
-  document.getElementById('desarrolloModal').classList.remove('hidden');
-}
-
-function closeDesarrolloModal() {
-  document.getElementById('desarrolloModal').classList.add('hidden');
-}
-
-// Cerrar modal de desarrollo al hacer clic fuera
-document.getElementById('desarrolloModal')?.addEventListener('click', function(e) {
-  if (e.target === this) {
-    closeDesarrolloModal();
-  }
-});
-
-// Funciones Modal Proyectos
-function openProyectosModal() {
-  document.getElementById('proyectosModal').classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-  setupImageZoom();
-}
-
-function closeProyectosModal() {
-  document.getElementById('proyectosModal').classList.add('hidden');
-  document.body.style.overflow = 'auto';
-}
-
-// Función para toggle garantías
-function toggleGarantias() {
-  const details = document.getElementById('garantiasDetails');
-  details.classList.toggle('hidden');
-}
-
-function openGarantiaDetalle() {
-  document.getElementById('garantiaModal').classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeGarantiaModal() {
-  document.getElementById('garantiaModal').classList.add('hidden');
-  if (document.getElementById('proyectosModal').classList.contains('hidden')) {
-    document.body.style.overflow = 'auto';
-  }
-}
-
-function openEquipoDetalle() {
-  openProyectosModal();
-  setTimeout(() => {
-    document.getElementById('equipoSection')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, 300);
-}
-
-function openProcesoDetalle() {
-  document.getElementById('procesoModal').classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeProcesoModal() {
-  document.getElementById('procesoModal').classList.add('hidden');
-  if (document.getElementById('proyectosModal').classList.contains('hidden')) {
-    document.body.style.overflow = 'auto';
-  }
-}
-
-// Cerrar modal de proyectos al hacer clic fuera
-document.getElementById('proyectosModal')?.addEventListener('click', function(e) {
-  if (e.target === this) {
-    closeProyectosModal();
-  }
-});
-</script>
-
 <!-- Botón Flotante WhatsApp -->
 <a href="https://wa.me/56920928095?text=Hola%20Chasquilla,%20me%20gustaría%20hacer%20una%20consulta" target="_blank" class="fixed bottom-8 right-8 z-40 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,211,102,0.4)] group active:scale-95" aria-label="Contactar por WhatsApp">
   <svg class="w-10 h-10 text-white fill-current drop-shadow-lg" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
     <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.7 69.4 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.4-.3-8.3 2.4-11 2.5-2.4 5.5-6.4 8.3-9.7 2.8-3.3 3.8-5.7 5.7-9.4 1.9-3.7 1-7-1.1-11.2-2.1-4.2-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
   </svg>
 </a>
+
+<script>
+  // Modal Registry to handle multiple open modals and body scrolling
+  const modalRegistry = new Set();
+
+  function toggleModal(id, show) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+
+    if (show) {
+      modal.classList.remove('hidden');
+      modalRegistry.add(id);
+      document.body.style.overflow = 'hidden';
+      if (id === 'proyectosModal') setupImageZoom();
+    } else {
+      modal.classList.add('hidden');
+      modalRegistry.delete(id);
+      // Only restore scroll if no other modals are open
+      if (modalRegistry.size === 0) {
+        document.body.style.overflow = 'auto';
+      }
+    }
+  }
+
+  function toggleMobileMenu() {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  }
+
+  function openImagePreview(src) {
+    const img = document.getElementById('previewImage');
+    if (img) img.src = src;
+    toggleModal('imagePreviewModal', true);
+  }
+
+  function setupImageZoom() {
+    const imgs = document.querySelectorAll('#proyectosModal img');
+    imgs.forEach(img => {
+      if (!img.dataset.zoomLoaded) {
+        img.classList.add('cursor-zoom-in', 'hover:scale-[1.03]', 'hover:ring-4', 'hover:ring-primary/30', 'transition-all', 'duration-300');
+        img.onclick = (e) => { e.stopPropagation(); openImagePreview(img.src); };
+        img.dataset.zoomLoaded = 'true';
+      }
+    });
+  }
+
+  // Compatibility wrappers for existing HTML onclick handlers
+  window.openSalonModal = () => toggleModal('salonModal', true);
+  window.closeSalonModal = () => toggleModal('salonModal', false);
+  window.openServiciosModal = () => toggleModal('serviciosModal', true);
+  window.closeServiciosModal = () => toggleModal('serviciosModal', false);
+  window.openSolucionesModal = () => toggleModal('solucionesModal', true);
+  window.closeSolucionesModal = () => toggleModal('solucionesModal', false);
+  window.openContactoModal = () => toggleModal('contactoModal', true);
+  window.closeContactoModal = () => toggleModal('contactoModal', false);
+  window.openDesarrolloModal = () => toggleModal('desarrolloModal', true);
+  window.closeDesarrolloModal = () => toggleModal('desarrolloModal', false);
+  window.openProyectosModal = () => toggleModal('proyectosModal', true);
+  window.closeProyectosModal = () => toggleModal('proyectosModal', false);
+  window.openGarantiaDetalle = () => toggleModal('garantiaModal', true);
+  window.closeGarantiaModal = () => toggleModal('garantiaModal', false);
+  window.openProcesoDetalle = () => toggleModal('procesoModal', true);
+  window.closeProcesoModal = () => toggleModal('procesoModal', false);
+  window.closeImagePreview = () => toggleModal('imagePreviewModal', false);
+  window.openEquipoDetalle = () => {
+    toggleModal('proyectosModal', true);
+    setTimeout(() => document.getElementById('equipoSection')?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+  };
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      // Close only the topmost opened modal
+      const lastModal = Array.from(modalRegistry).pop();
+      if (lastModal) toggleModal(lastModal, false);
+    }
+  });
+</script>
 
 </body>
