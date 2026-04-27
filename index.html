@@ -207,9 +207,6 @@ COMENZAR AHORA
 <span class="material-icons">radar</span>
             <span>COMENZAR ESCANEO</span>
           </button>
-<button class="bg-white/80 dark:bg-stone-800 border border-primary/20 hover:border-primary/60 hover:shadow-lg px-8 py-4 sm:py-5 rounded-xl font-header font-bold text-sm sm:text-lg flex items-center justify-center gap-3 transition-all" onclick="openProyectosModal()">
-            <span>VER PROYECTOS</span>
-          </button>
 </div>
 <div class="mt-8 sm:mt-12 flex flex-col sm:flex-row flex-wrap items-center gap-4 sm:gap-8 justify-center lg:justify-start">
 <div class="text-center lg:text-left">
@@ -331,7 +328,7 @@ COMENZAR AHORA
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <!-- Project Card 1 -->
         <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all h-64 flex flex-col">
-          <img src="img/salon-1.jpg" alt="Remodelación de Cocina Cyberpunk con luces LED" class="absolute inset-0 w-full h-full object-cover" onerror="handleImgError(this)" loading="lazy">
+          <img src="img/salon-1.jpg" alt="Proyecto destacado: Cocina Futurista con iluminación LED" class="absolute inset-0 w-full h-full object-cover" onerror="handleImgError(this)" loading="lazy">
           <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
             <div class="flex items-center gap-2 mb-2">
@@ -345,7 +342,7 @@ COMENZAR AHORA
 
         <!-- Project Card 2 -->
         <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all h-64 flex flex-col">
-          <img src="img/salon-2.jpg" alt="Sala de estar con diseño Minimalista Zen" class="absolute inset-0 w-full h-full object-cover" onerror="handleImgError(this)" loading="lazy">
+          <img src="img/salon-2.jpg" alt="Proyecto destacado: Sala Minimalista Zen" class="absolute inset-0 w-full h-full object-cover" onerror="handleImgError(this)" loading="lazy">
           <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
             <h4 class="text-white font-bold text-lg">Sala Minimalista Zen</h4>
@@ -355,7 +352,7 @@ COMENZAR AHORA
 
         <!-- Project Card 3 -->
         <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all h-64 flex flex-col">
-          <img src="img/salon-3.jpg" alt="Baño tipo Spa con tecnología Smart" class="absolute inset-0 w-full h-full object-cover" onerror="handleImgError(this)" loading="lazy">
+          <img src="img/salon-3.jpg" alt="Proyecto destacado: Baño Spa Smart" class="absolute inset-0 w-full h-full object-cover" onerror="handleImgError(this)" loading="lazy">
           <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
             <h4 class="text-white font-bold text-lg">Baño Spa Smart</h4>
@@ -365,11 +362,21 @@ COMENZAR AHORA
 
         <!-- Project Card 4 -->
         <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all h-64 flex flex-col">
-          <img src="img/salon-4.jpg" alt="Terraza con diseño de Oasis Urbano" class="absolute inset-0 w-full h-full object-cover" onerror="handleImgError(this)" loading="lazy">
+          <img src="img/salon-4.jpg" alt="Proyecto destacado: Oasis Urbano" class="absolute inset-0 w-full h-full object-cover" onerror="handleImgError(this)" loading="lazy">
           <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
           <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
             <h4 class="text-white font-bold text-lg">Oasis Urbano</h4>
             <p class="text-white/80 text-xs">640 Puntos • @green_thumb</p>
+          </div>
+        </div>
+
+        <!-- Project Card 5 -->
+        <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all h-64 flex flex-col">
+          <img src="img/salon-5.jpeg" alt="Proyecto destacado: Oficina Tech" class="absolute inset-0 w-full h-full object-cover" onerror="handleImgError(this)" loading="lazy">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <h4 class="text-white font-bold text-lg">Oficina Tech</h4>
+            <p class="text-white/80 text-xs">945 Puntos • @workspace_design</p>
           </div>
         </div>
       </div>
@@ -392,12 +399,125 @@ COMENZAR AHORA
         </div>
       </div>
 
+      <!-- Galería Completa Section -->
+      <div id="galeriaCompletaSection" class="mb-12 border-t border-primary/20 pt-8">
+        <h3 class="text-2xl font-bold mb-6 text-primary">Galería Completa de Proyectos</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <!-- Imágenes IMG -->
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/IMG-1.jpeg" alt="Proyecto: Trabajo técnico profesional" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/IMG-2.jpg" alt="Proyecto: Mantenimiento especializado" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+            <span class="absolute top-2 right-2 bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold uppercase shadow-lg">Top</span>
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/IMG-3.jpeg" alt="Proyecto: Obra de pintura" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/IMG-4.jpeg" alt="Proyecto: Instalaciones modernas" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/IMG-5.jpg" alt="Proyecto: Acabados profesionales" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+
+          <!-- Imágenes Salon -->
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/salon-1.jpg" alt="Proyecto: Iluminación inteligente" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/salon-2.jpg" alt="Proyecto: Espacio minimalista" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+            <span class="absolute top-2 right-2 bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold uppercase shadow-lg">Top</span>
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/salon-3.jpg" alt="Proyecto: Modernización de baño" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/salon-4.jpg" alt="Proyecto: Jardín vertical urbano" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+            <span class="absolute top-2 right-2 bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold uppercase shadow-lg">Top</span>
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/salon-5.jpeg" alt="Proyecto: Oficina tech" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+
+          <!-- Imágenes Pro -->
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/pro-1.jpg" alt="Proyecto: Planificación y diseño" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/pro-2.jpg" alt="Proyecto: Ejecución limpia" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+            <span class="absolute top-2 right-2 bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold uppercase shadow-lg">Top</span>
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/pro-3.jpg" alt="Proyecto: Supervisión técnica" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/pro-4.jpg" alt="Proyecto: Acabados finales" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/pro-5.jpg" alt="Proyecto: Inspección final" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+
+          <!-- Imágenes Tec -->
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/tec-1.jpeg" alt="Proyecto: Escaneo 3D de espacios" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/tec-2.jpg" alt="Proyecto: Visualización AR" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+            <span class="absolute top-2 right-2 bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold uppercase shadow-lg">Top</span>
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/tec-3.jpg" alt="Proyecto: Planificación digital" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/tec-4.jpeg" alt="Proyecto: Herramientas láser" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/tec-5.jpeg" alt="Proyecto: Renderizado de interiores" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+
+          <!-- Imágenes Equipo -->
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/EQUI-1.jpg" alt="Proyecto: Técnico certificado" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/EQUI-2.jpg" alt="Proyecto: Especialista en obra" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/EQUI-3.jpg" alt="Proyecto: Técnico especializado" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/EQUI-4.jpg" alt="Proyecto: Maestro en acabados" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/EQUI-5.jpg" alt="Proyecto: Supervisor de obra" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+
+          <!-- Imágenes Garantía -->
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/gar.1.jpg" alt="Proyecto: Certificado de garantía" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/gar.2.jpg" alt="Proyecto: Control de calidad" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/gar.3.jpg" alt="Proyecto: Inspección garantizada" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/gar.4.jpg" alt="Proyecto: Respaldo técnico" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+          <div class="group relative bg-stone-100 dark:bg-stone-800 rounded-xl overflow-hidden hover:shadow-lg transition-all">
+            <img src="img/gar.5.jpg" alt="Proyecto: Obra garantizada" class="w-full aspect-square object-cover cursor-zoom-in hover:scale-105 transition-transform duration-300" loading="lazy" onerror="handleImgError(this)" onclick="openImagePreview(this.src)">
+          </div>
+        </div>
+      </div>
+
       <!-- CTA Buttons -->
       <div class="flex flex-col sm:flex-row gap-4">
-        <a href="../salón_de_la_fama_-_votaciones_chasquilla_1/salondefama.html" target="_blank" class="flex-1 bg-primary hover:bg-orange-600 text-white px-6 py-4 rounded-lg font-header font-bold text-center transition-all flex items-center justify-center gap-2">
+        <button onclick="document.getElementById('galeriaCompletaSection').scrollIntoView({ behavior: 'smooth', block: 'start' })" class="flex-1 bg-primary hover:bg-orange-600 text-white px-6 py-4 rounded-lg font-header font-bold text-center transition-all flex items-center justify-center gap-2">
           <span class="material-icons">open_in_new</span>
           Ver Galería Completa
-        </a>
+        </button>
         <button onclick="closeSalonModal()" class="flex-1 border border-primary/20 text-primary hover:bg-primary/10 px-6 py-4 rounded-lg font-header font-bold transition-all">
           Cerrar
         </button>
@@ -604,22 +724,111 @@ COMENZAR AHORA
         <h3 class="text-2xl font-bold mb-4 text-primary">Salón de la Fama</h3>
         <p class="text-stone-600 dark:text-stone-400 mb-6">Explora nuestros proyectos más innovadores y vota por los que te inspiren.</p>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <!-- Imágenes IMG -->
           <div class="relative">
-            <img src="img/salon-1.jpg" alt="Proyecto destacado: Iluminación inteligente" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+            <img src="img/IMG-1.jpeg" alt="Proyecto: Trabajo técnico profesional" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
           </div>
           <div class="relative">
-            <img src="img/salon-2.jpg" alt="Proyecto destacado: Espacio minimalista" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+            <img src="img/IMG-2.jpg" alt="Proyecto: Mantenimiento especializado" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
             <span class="absolute top-2 right-2 bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold uppercase shadow-lg">Destacado</span>
           </div>
           <div class="relative">
-            <img src="img/salon-3.jpg" alt="Proyecto destacado: Modernización de baño" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+            <img src="img/IMG-3.jpeg" alt="Proyecto: Obra de pintura" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
           </div>
           <div class="relative">
-            <img src="img/salon-4.jpg" alt="Proyecto destacado: Jardín vertical urbano" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+            <img src="img/IMG-4.jpeg" alt="Proyecto: Instalaciones modernas" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/IMG-5.jpg" alt="Proyecto: Acabados profesionales" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+
+          <!-- Imágenes Salon -->
+          <div class="relative">
+            <img src="img/salon-1.jpg" alt="Proyecto: Iluminación inteligente" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/salon-2.jpg" alt="Proyecto: Espacio minimalista" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
             <span class="absolute top-2 right-2 bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold uppercase shadow-lg">Destacado</span>
           </div>
           <div class="relative">
-            <img src="img/salon-5.jpeg" alt="Proyecto destacado: Oficina tech" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+            <img src="img/salon-3.jpg" alt="Proyecto: Modernización de baño" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/salon-4.jpg" alt="Proyecto: Jardín vertical urbano" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+            <span class="absolute top-2 right-2 bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold uppercase shadow-lg">Destacado</span>
+          </div>
+          <div class="relative">
+            <img src="img/salon-5.jpeg" alt="Proyecto: Oficina tech" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+
+          <!-- Imágenes Pro -->
+          <div class="relative">
+            <img src="img/pro-1.jpg" alt="Proyecto: Planificación y diseño" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/pro-2.jpg" alt="Proyecto: Ejecución limpia" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+            <span class="absolute top-2 right-2 bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold uppercase shadow-lg">Destacado</span>
+          </div>
+          <div class="relative">
+            <img src="img/pro-3.jpg" alt="Proyecto: Supervisión técnica" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/pro-4.jpg" alt="Proyecto: Acabados finales" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/pro-5.jpg" alt="Proyecto: Inspección final" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+
+          <!-- Imágenes Tec -->
+          <div class="relative">
+            <img src="img/tec-1.jpeg" alt="Proyecto: Escaneo 3D de espacios" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/tec-2.jpg" alt="Proyecto: Visualización AR" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+            <span class="absolute top-2 right-2 bg-primary text-white text-[10px] px-2 py-1 rounded-full font-bold uppercase shadow-lg">Destacado</span>
+          </div>
+          <div class="relative">
+            <img src="img/tec-3.jpg" alt="Proyecto: Planificación digital" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/tec-4.jpeg" alt="Proyecto: Herramientas láser" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/tec-5.jpeg" alt="Proyecto: Renderizado de interiores" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+
+          <!-- Imágenes Equipo -->
+          <div class="relative">
+            <img src="img/EQUI-1.jpg" alt="Proyecto: Técnico certificado" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/EQUI-2.jpg" alt="Proyecto: Especialista en obra" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/EQUI-3.jpg" alt="Proyecto: Técnico especializado" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/EQUI-4.jpg" alt="Proyecto: Maestro en acabados" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/EQUI-5.jpg" alt="Proyecto: Supervisor de obra" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+
+          <!-- Imágenes Garantía -->
+          <div class="relative">
+            <img src="img/gar.1.jpg" alt="Proyecto: Certificado de garantía" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/gar.2.jpg" alt="Proyecto: Control de calidad" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/gar.3.jpg" alt="Proyecto: Inspección garantizada" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/gar.4.jpg" alt="Proyecto: Respaldo técnico" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
+          </div>
+          <div class="relative">
+            <img src="img/gar.5.jpg" alt="Proyecto: Obra garantizada" class="w-full aspect-square object-cover rounded-xl border border-primary/20 hover:scale-105 transition-transform duration-300 cursor-zoom-in" loading="lazy" onerror="handleImgError(this)">
           </div>
         </div>
       </div>
